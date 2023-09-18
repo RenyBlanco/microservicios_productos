@@ -1,5 +1,6 @@
 package com.rbsoluciones.producto.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,8 +19,11 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 public class Categoria {
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="id_categoria")
 	private Long id;
-	private String categoria;
+	
+	private String nombre;
 }

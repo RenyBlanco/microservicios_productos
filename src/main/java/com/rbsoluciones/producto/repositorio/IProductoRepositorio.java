@@ -6,6 +6,6 @@ import com.rbsoluciones.producto.entity.*;
 
 public interface IProductoRepositorio extends JpaRepository<Producto, Long>{
 	
-	public List<Producto> findByCategoria(Categoria categoria);
+	List<Producto> findByCategoria(Categoria categoria);
 
 }

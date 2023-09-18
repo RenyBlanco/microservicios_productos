@@ -10,6 +10,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -27,15 +31,20 @@ public class Producto {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
+	
 	private String producto;
 	private String descripcion;
+	
 	private int stock;
 	private double precio;
 	private String estado;
+	
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date creadoEn;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "id_categoria")
+	@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 	private Categoria categoria;
 	
 

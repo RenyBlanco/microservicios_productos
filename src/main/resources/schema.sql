@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS categorias;
 
 CREATE TABLE categorias (
-                                id BIGINT AUTO_INCREMENT  PRIMARY KEY,
-                                categoria VARCHAR(250) NOT NULL
+                                id_categoria BIGINT AUTO_INCREMENT  PRIMARY KEY,
+                                nombre VARCHAR(250) NOT NULL
 );
 
 

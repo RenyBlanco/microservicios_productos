@@ -1,6 +1,6 @@
-INSERT INTO categorias (id, categoria) VALUES (1,'Calzados');
-INSERT INTO categorias (id, categoria) VALUES (2,'Ropa');
-INSERT INTO categorias (id, categoria) VALUES (3,'Electronicos');
+INSERT INTO categorias (id_categoria, nombre) VALUES (1,'Calzados');
+INSERT INTO categorias (id_categoria, nombre) VALUES (2,'Ropa');
+INSERT INTO categorias (id_categoria, nombre) VALUES (3,'Electronicos');
 
 INSERT INTO productos (producto, descripcion, stock, precio, estado, creado_En, id_categoria) 
 VALUES ('Adidas Cloudform utlimate', 'para caminar', 5, 120000.0, 'activo', '2023-09-17', 1);
